@@ -4,7 +4,7 @@ A machine learning-powered Flask web app that predicts the valuation of startup 
 
 A machine learning-powered web app to **predict the valuation of startup unicorns** based on country, industry, and investors — deployed using Flask.
 
-![Unicorn App Screenshot](Screenshot .png) <!-- Optional: Add your own screenshot URL -->
+![Unicorn App Screenshot](Screenshot.png) <!-- Optional: Add your own screenshot URL -->
 
 ---
 
