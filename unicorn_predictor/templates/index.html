@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🦄 Unicorn Valuation Predictor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  h1 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  label {
+    font-weight: 600;
+    color: white;
+  }
+
+  .form-control {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 10px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 10px;
+    background: #1cb5e0;
+    background: linear-gradient(to right, #1cb5e0, #000851);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(to right, #000851, #1cb5e0);
+  }
+
+  .result {
+    text-align: center;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="glass-card">
+    <h1>🦄 Unicorn Valuation Predictor</h1>
+    <form method="POST" action="/predict">
+
+      <div class="mb-3">
+        <label>Country: USA</label>
+        <input type="text" class="form-control" name="Country_USA" placeholder="0 or 1">
+      </div>
+
+      <div class="mb-3">
+        <label>Country: India</label>
+        <input type="text" class="form-control" name="Country_India" placeholder="0 or 1">
+      </div>
+
+      <div class="mb-3">
+        <label>Country: China</label>
+        <input type="text" class="form-control" name="Country_China" placeholder="0 or 1">
+      </div>
+
+      <div class="mb-3">
+        <label>Industry: Fintech</label>
+        <input type="text" class="form-control" name="Industry_Fintech" placeholder="0 or 1">
+      </div>
+
+      <div class="mb-3">
+        <label>Industry: E-commerce</label>
+        <input type="text" class="form-control" name="Industry_E-commerce & direct-to-consumer" placeholder="0 or 1">
+      </div>
+
+      <div class="mb-3">
+        <label>Main Investor: SoftBank</label>
+        <input type="text" class="form-control" name="Main_Investor_SoftBank" placeholder="0 or 1">
+      </div>
+
+      <div class="mb-3">
+        <label>Main Investor: Tiger Global</label>
+        <input type="text" class="form-control" name="Main_Investor_Tiger Global Management" placeholder="0 or 1">
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">🚀 Predict Valuation</button>
+
+    </form>
+
+    {% if prediction_text %}
+      <div class="result">{{ prediction_text }}</div>
+    {% endif %}
+
+    <div class="footer">
+      💡 Project by <strong>Aayushya Kumar Singh</strong> | 2025 | #MachineLearning #Unicorns
+    </div>
+  </div>
+
+</body>
+</html>
+
+
